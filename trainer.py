@@ -28,7 +28,6 @@ class Trainer(object):
         self.testJ = []
         
         params0 = self.N.getParams()
-
         options = {'maxiter': 200, 'disp' : True}
         _res = opt.minimize(self.costFunctionWrapper, params0, jac=True, method='BFGS', \
                                  args=(trainX, trainY), options=options, callback=self.callbackF)
